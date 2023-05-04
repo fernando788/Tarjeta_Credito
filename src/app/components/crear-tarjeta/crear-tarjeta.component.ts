@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup , FormBuilder, Validators} from '@angular/forms';
+import { TarjetaCredito } from 'src/app/models/tarjeta';
 
 @Component({
   selector: 'app-crear-tarjeta',
@@ -25,5 +26,16 @@ ngOnInit(): void {
 
 crearTarjeta(){
   console.log(this.forms);
+
+  const TARJETA: TarjetaCredito = {
+    titular: this.forms.value.titular,
+    numeroDeTarjeta: this.forms.value.titular,
+    fechaExpiracion: this.forms.value.fechaExpiracion,
+    cvv: this.forms.value.cvv,
+    fechaActualizacion: new Date(),
+    fechaCreacion: new Date
+  }
+
+  console.log(TARJETA)
 }
 }

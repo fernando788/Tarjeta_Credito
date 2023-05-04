@@ -2,6 +2,7 @@ export class TarjetaCredito{
     id?: string;
     titular: string;
     numeroDeTarjeta: string;
+    fechaExpiracion: Date;
     cvv: number;
     fechaCreacion: Date;
     fechaActualizacion: Date;
@@ -14,5 +15,6 @@ export class TarjetaCredito{
             this.cvv= cvv;
             this.fechaCreacion= new Date();
             this.fechaActualizacion= new Date();
+            this.fechaExpiracion= new Date();
         }
 }
